@@ -1,0 +1,35 @@
+.loader {
+    position: fixed;
+    top:0; left:0; right:0; bottom:0;
+    background-color: $white;
+    z-index: 100;
+    transition: top 0.75s ease, opacity 0.5s ease;
+    .wrapper {
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+    }
+    .mario {
+        width: 26px;
+        height: 35px;
+        margin: 0 auto;
+        background: url('../images/mario_sprite.png') 0 -35px;
+        animation: run .5s steps(9) infinite;
+    }
+}
+.loaded {
+    .loader {
+        top: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes run {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: -234px;
+    }
+}

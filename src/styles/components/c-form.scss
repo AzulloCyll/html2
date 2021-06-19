@@ -1,0 +1,103 @@
+.form {
+    &-cont { // .form-cont
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -#{0.5*$space};  // #{nazwa_zmiennej} , po to aby móc wykorzystać znak minusa przed zmienną
+        &.is--submitted { // => .form-cont.is--submitted
+            input, select {
+                &:invalid {
+                    border-color: $color-error;
+                    background-color: rgba(255, 0, 0, 0.23);
+                    & + .error-msg {
+                        display: block;
+                    }
+                }
+            }
+            input {
+                &[type="radio"], &[type="checkbox"] {
+                    &:invalid {
+                        & + label {
+                            color: $color-error;
+                        }
+                        & ~ .error-msg {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-col {
+        width: 100%;
+        padding: 0 0.5*$space;
+        @include tablet {
+            width: 50%;
+        }
+    }
+    &-el {
+        margin-bottom: 1.25*$space;
+        position: relative;
+    }
+    &-submit {
+        width: 100%;
+        text-align: center;
+    }
+    label {
+        display: block;
+        margin-bottom: 0.5*$space;
+    }
+    .npt {
+        width: 100%;
+    }
+    .error-msg {
+        position: absolute;
+        bottom: -22px;
+        color: $color-error;
+        display: none;
+    }
+    input {
+        &[type="radio"], &[type="checkbox"] {
+            position: absolute;
+            left: -999999px;
+            opacity: 0;
+            & + label {
+                padding-left: $space;
+                position: relative;
+                &:before {
+                    position: absolute;
+                    left: 0.25*$space;
+                }
+            }
+        }
+        &[type="radio"] {
+            & + label {  // =>  input[type="radio"] + label  - style dla <label>, która występuje w kodzie BEZPOŚREDNIO za input'em w typie radio
+                &:before {
+                    content: '\25ce';
+                    font-size: 1.25em;
+                }
+            }
+            &:checked {
+                & + label { // => input[type="radio"]:checked + label   - style dla <label>, która występuje w kodzie BEZPOŚREDNIO za ZAZNACZONYM input'em w typie radio
+                    &:before {
+                        content: '\25C9';
+                    }
+                }
+            }
+        }
+        &[type="checkbox"] {
+            & + label {
+                &:before {
+                    content: '\2610';
+                    font-size: 1.5em;
+                }   
+            }
+            &:checked {
+                & + label {
+                    &:before {
+                        content: '\2611';
+                    }
+                }
+            }
+        }
+    }
+}

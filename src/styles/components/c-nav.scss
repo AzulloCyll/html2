@@ -1,0 +1,78 @@
+.nav {
+    @include desktop {
+        position: fixed;
+        z-index: 10;
+        top:0;
+        left:0; 
+        right:0;
+    }
+    &-container { // .nav-container
+        height: 2*$space;
+        overflow: hidden;
+        margin: 0 -32px;
+        position: relative;
+        @include desktop {
+            margin:0;
+        }
+        /*  powyższy zapis jest równoznaczny z:
+            @media screen and (min-width: $bp-desktop) {
+                margin:0;
+            }
+        */
+        .open & { // => .open .nav-container , czyli klasa .nav-container zagnieżdżona w klasie .open
+            height: 100vh;
+            background-color: $color-2;
+        }
+    }
+    &-list {  // = .nav-list
+        margin-top: 2*$space;
+        text-align: center;
+        @include desktop {
+            text-align: right;
+            margin-top:0;
+        }
+        li {
+            padding: 0.75*$space 0;
+            @include desktop {
+                display: inline-block;
+                margin-left: $space;
+            }
+            a {
+                color: $white;
+                @include desktop {
+                    color: $color-1;
+                }
+            }
+        }
+    }
+    &-logo {
+        position: absolute;
+        top: 12px;
+        left: $space;
+        @include desktop {
+            left:0;
+        }
+    }
+    &-button {
+        width: $base-unit;
+        padding:0;
+        background-color: transparent;
+        border: 0;
+        position: absolute;
+        right: $space;
+        top: 28px;
+        @include desktop {
+            display: none;
+        }
+        span {
+            display: block;
+            width: $base-unit;
+            margin-bottom: 2px;
+            background-color: $color-1;
+            height: 2px;
+            .open & {
+                background-color: $white;
+            }
+        }
+    }
+}

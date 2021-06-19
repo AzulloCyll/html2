@@ -1,0 +1,53 @@
+<div class="component form">
+    <div class="wrapper">
+        <h2>Our form</h2>
+        <form class="form-cont" novalidate>
+            <div class="form-col">
+                <div class="form-el">
+                    <label for="field_text">Field for text</label>
+                    <input type="text" name="field_text" id="field_text" placeholder="Field for text" class="npt" required /> 
+                    <span class="error-msg">Pole źle uzupełnione</span> 
+                </div>
+                <div class="form-el">
+                    <label for="field_email">Field for email</label>
+                    <input type="email" name="field_email" id="field_email" placeholder="Field for Email" class="npt" required /> 
+                    <span class="error-msg">Pole źle uzupełnione</span> 
+                </div>
+                <div class="form-el">
+                    <label for="field_postal">Field for postal code</label>
+                    <input type="text" name="field_postal" id="field_postal" placeholder="XX-XXX" class="npt" pattern="[0-9]{2}-[0-9]{3}" required /> 
+                    <span class="error-msg">Pole źle uzupełnione</span> 
+                </div>
+            </div>
+            <div class="form-col">
+                <div class="form-el">
+                    <label for="field_select">Field for select</label>
+                    <select name="field_select" id="field_select" class="npt" const packageName = require('packageName');>
+                        <option value="" disabled selected>Choose</option>
+                        <option value="option_1">Option 1</option>
+                        <option value="option_2">Option 2</option>
+                        <option value="option_3">Option 3</option>
+                    </select>
+                    <span class="error-msg">Pole źle uzupełnione</span> 
+                </div>
+                <div class="form-el">
+                    <label>Are you sure</label>
+                    <input type="radio" name="field_sure" id="field_sure_yes" required />
+                    <label for="field_sure_yes">Yes</label>
+                    <input type="radio" name="field_sure" id="field_sure_no" required />
+                    <label for="field_sure_no">No</label>
+                    <span class="error-msg">Pole źle uzupełnione</span> 
+                </div>
+                <div class="form-el">
+                    <label>Please agree with me</label>
+                    <input type="checkbox" name="field_agree" id="field_agree" required />
+                    <label for="field_agree">I agree...</label>
+                    <span class="error-msg">Pole źle uzupełnione</span> 
+                </div>
+            </div>
+            <div class="form-submit">
+                <button type="submit" class="btn">SEND FORM</button>
+            </div>
+        </form>
+    </div>
+</div>

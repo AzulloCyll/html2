@@ -1,0 +1,33 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("../fonts/flaticon.ttf?fd516a280d5215a0b51fd34752e9ccbd") format("truetype"),
+url("../fonts/flaticon.woff?fd516a280d5215a0b51fd34752e9ccbd") format("woff"),
+url("../fonts/flaticon.woff2?fd516a280d5215a0b51fd34752e9ccbd") format("woff2"),
+url("../fonts/flaticon.eot?fd516a280d5215a0b51fd34752e9ccbd#iefix") format("embedded-opentype"),
+url("../fonts/flaticon.svg?fd516a280d5215a0b51fd34752e9ccbd#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "play": "\f101",
+    "pause": "\f102",
+);
+
+.flaticon-play:before {
+    content: map-get($flaticon-map, "play");
+}
+.flaticon-pause:before {
+    content: map-get($flaticon-map, "pause");
+}

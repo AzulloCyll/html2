@@ -1,0 +1,67 @@
+.hero {
+    background-image: url('../images/hero-mob.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 450px;
+    position: relative;
+    @include tablet {
+        background-image: url('../images/hero-tab.jpg');
+        height: 600px;
+    }
+    @include desktop {
+        background-image: url('../images/hero-desk.jpg');
+        height: 100vh;
+        min-height: 450px;
+        background-size: cover;
+    }
+    &:before {
+        content: '';
+        display: block;
+        left: 0; right: 0;
+        top: 50%;
+        bottom: 0;
+        position: absolute;
+        @include verticalGradient(transparent, rgba(0,0,0, 0.5));
+    }
+    &:after {
+        content: '';
+        display: block;
+        left: 0; right: 0; top: 0; bottom: 0;
+        position: absolute;
+        background-image:   linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 1px, transparent 1px),
+                            linear-gradient(to right, rgba(0, 0, 0, 0.3) 1px, transparent 1px);
+        background-size: 3px 3px;
+    }
+    .wrapper {  // => .hero .wrapper
+        height: 100%;
+        position: relative;
+    }
+    &-container { // => .hero-container
+        position: absolute;
+        bottom: $space * 2;
+        z-index: 5;
+        h1, h2 {
+            color: $white;
+        }
+        h1 {
+           @include textShadow(red);
+        }
+        h2 {
+            @include textShadow(blue);
+        }
+        .btn {
+            span { // => .hero-container .btn span
+                &:after {
+                    display: inline-block;
+                    margin-left: 4px;
+                    content: '\02192';
+                }
+            }
+        }
+    }
+
+    .btn {
+        //@extend %btnRed;
+    }
+
+}

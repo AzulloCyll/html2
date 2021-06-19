@@ -1,0 +1,51 @@
+.boxes {
+    &__cont {
+        display: flex;
+        margin-left: -#{$space};
+        margin-right: -#{$space};
+        flex-wrap: wrap;
+    }
+    .call {
+        padding: $space;
+        width: 100%;
+        @include mobile {
+            width: 50%;
+        }
+        @include tablet {
+            width: 33.3333333333333333333%
+        }
+        @include desktop {
+            width: 25%;
+        }
+        &.zebra {
+            order: 1;
+        }
+        &.tygrys {
+            order: 4;
+        }
+        &.koliber {
+            order: 3;
+        }
+        &.los {
+            order: 2;
+        }
+    }
+    h3 { // wstawiane kropek jesli treść nie mieści się w jednej linii
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%;
+    }
+    p { // wstawianie kropek jeśli treść zajmuje więcej niż liczba linii 
+        // wskazana we właścicości -webkit-line-clamp
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+    }
+}
+
+
+.transforming {
+    transform: skew(-20deg, 50deg);
+}

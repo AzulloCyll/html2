@@ -1,0 +1,30 @@
+.footer {
+    .wrapper { // => .footer .wrapper
+        overflow: hidden;
+    }
+    &-col { // => .footer-col
+        float: left;
+        width: 50%;
+        padding-right: $base-unit;
+        margin-bottom: $space;
+        @include desktop {
+            width: 25%;
+        }
+    }
+    ul {
+        li {
+            margin-bottom: $space * 0.25;
+        }
+    }
+    a { // => .footer a
+        color: $color-2-light;
+        &:hover { // => .footer a:hover
+            color: $color-4-light;
+        }
+    }
+    &-disclaimer {
+        color: $color-2-light;
+        font-size: $font-size-body-2;
+        clear: left;
+    }
+}

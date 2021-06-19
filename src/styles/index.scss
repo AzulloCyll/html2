@@ -1,0 +1,25 @@
+// global
+@import '_reset.scss';
+@import '_variables.scss';
+@import '_mixin.scss';
+@import '_global.scss';
+
+// addons
+@import '_flaticon.scss';
+@import '_swiper.scss';
+
+
+// our modules
+@import 'components/c-nav.scss';
+@import 'components/c-hero.scss';
+@import 'components/c-footer.scss';
+@import 'components/c-image.scss';
+@import 'components/c-yt-video.scss';
+@import 'components/c-video.scss';
+@import 'components/c-boxes.scss';
+@import 'components/c-form.scss';
+@import 'components/c-loader.scss';
+@import 'components/c-slider.scss';
+@import 'components/c-text-column.scss';
+
+@import 'components/c-baner2.scss';

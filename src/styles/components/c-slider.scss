@@ -1,0 +1,8 @@
+.swiper-slide {
+    img {
+        filter: sepia(1);
+        &:hover {
+            filter: none;
+        }
+    }
+}

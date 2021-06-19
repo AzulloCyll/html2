@@ -1,0 +1,26 @@
+.text-column {
+    p {
+        column-count: 5;
+        column-gap: 40px;
+    }
+    ul {
+        column-count: 3;
+        li {
+            break-inside: avoid;
+            page-break-inside: avoid;
+            -webkit-column-break-inside: avoid;
+            &:nth-child(1) {color: red}
+            &:nth-child(2) {color: blue}
+            &:nth-child(3) {color: orange}
+            &:nth-child(4) {color: pink}
+            &:nth-child(5) {color: green}
+            &:nth-child(6) {color: purple}
+            &:nth-child(7) {color: olive}
+            &:nth-child(8) {color: red}
+            &:nth-child(9) {color: blue}
+            &:nth-child(10) {color: orange}
+            &:nth-child(11) {color: pink}
+            &:nth-child(12) {color: green}
+        }
+    }
+}

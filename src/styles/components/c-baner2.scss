@@ -1,0 +1,234 @@
+.baner-anim-container-2 {
+	display: block;
+	width: 1485px;
+	height: 130px;
+	margin: 0 auto;
+	background-image: url(../images/bg-min.jpg);
+	position: relative;
+	overflow: hidden;
+}
+
+.line-1-2,
+.line-2-2,
+.line-3-2,
+.line-4-2,
+.line-5-2,
+.brilliant-2,
+.text_1-2,
+.text_2-2,
+.button-2 {
+	position: absolute;
+}
+
+.text_1-2 {
+	left: 45%;
+	top: 17.5%;
+	animation: text_1-2 9s ease infinite;
+}
+.text_2-2 {
+	left: 30%;
+	top: 150%;
+	animation: text_2-2 9s ease infinite;
+}
+
+.brilliant-2 {
+	left: 26%;
+	top: -10%;
+	animation: anim-brilliant-2 9s ease infinite;
+}
+
+.line-1-2 {
+	left: 50%;
+	animation: anim-line1-2 9s ease infinite;
+}
+.line-2-2 {
+	left: 2%;
+	animation: anim-line2-2 9s ease infinite;
+}
+.line-3-2 {
+	left: 90%;
+	animation: anim-line3-2 9s ease infinite;
+}
+.button-2 {
+	left: 60%;
+	top: 46%;
+	opacity: 0;
+	animation: button-2 9s ease infinite;
+}
+
+@keyframes button-2 {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0;
+	}
+	60% {
+		opacity: 0;
+	}
+	70% {
+		opacity: 1;
+	}
+	95% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+// .line-5-2 {
+// 	left: 90%;
+// 	animation: anim-line5-2 9s ease infinite;
+// }
+
+@keyframes text_1-2 {
+	0% {
+		opacity: 0;
+		transform: translateX(20%);
+	}
+	10% {
+		opacity: 0;
+		transform: translateX(20%);
+	}
+	40% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+	42% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes text_2-2 {
+	0% {
+		top: 150%;
+	}
+	50% {
+		top: 150%;
+	}
+	60% {
+		top: 18%;
+		opacity: 1;
+	}
+	95% {
+		top: 18%;
+	}
+	100% {
+		opacity: 0;
+
+		top: 150%;
+	}
+}
+
+@keyframes anim-line1-2 {
+	0% {
+		left: 60%;
+	}
+	10% {
+		left: 5%;
+	}
+	40% {
+		left: 5%;
+	}
+	60% {
+		left: 89%;
+	}
+	95% {
+		left: 89%;
+	}
+	100% {
+		left: 60%;
+	}
+}
+
+@keyframes anim-line2-2 {
+	0% {
+		left: 2%;
+	}
+	10% {
+		left: 18%;
+	}
+	40% {
+		left: 18%;
+	}
+	60% {
+		left: 7%;
+	}
+	95% {
+		left: 7%;
+	}
+	100% {
+		left: 2%;
+	}
+}
+
+@keyframes anim-line3-2 {
+	0% {
+		left: 90%;
+	}
+	10% {
+		left: 24.8%;
+	}
+	40% {
+		left: 24.8%;
+	}
+	60% {
+		left: 78%;
+	}
+	95% {
+		left: 78%;
+	}
+	100% {
+		left: 90%;
+	}
+}
+
+@keyframes anim-line4-2 {
+	0% {
+		left: 5%;
+	}
+	10% {
+		left: 75%;
+	}
+	40% {
+		left: 75%;
+	}
+	60% {
+		left: 15%;
+	}
+	95% {
+		left: 15%;
+	}
+	100% {
+		left: 5%;
+	}
+}
+
+@keyframes anim-brilliant-2 {
+	0% {
+		opacity: 0;
+		transform: scale(0.5);
+	}
+	8% {
+		opacity: 1;
+		transform: scale(1.05);
+	}
+	10% {
+		transform: scale(1);
+	}
+	40% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	45% {
+		opacity: 0;
+		transform: scale(0.7);
+	}
+	100% {
+		opacity: 0;
+	}
+}
